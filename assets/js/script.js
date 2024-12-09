@@ -168,3 +168,58 @@ window.addEventListener("mousemove", function (event) {
   }
 
 });
+
+/**
+ * Meals Time
+ */
+
+const mealTypeDropdown = document.getElementById('mealType');
+const timeDropdown = document.getElementById('timeDropdown');
+
+const mealTimes = {
+  breakfast: [
+    { value: '08:30am', text: '8:30 AM' },
+    { value: '09:00am', text: '9:00 AM' },
+    { value: '09:30am', text: '9:30 AM' },
+    { value: '10:00am', text: '10:00 AM' },
+    { value: '10:30am', text: '10:30 AM' },
+    { value: '11:00am', text: '11:00 AM' },
+  ],
+  lunch: [
+    { value: '01:30pm', text: '1:30 PM' },
+    { value: '02:00pm', text: '2:00 PM' },
+    { value: '02:30pm', text: '2:30 PM' },
+    { value: '03:00pm', text: '3:00 PM' },
+    { value: '03:30pm', text: '3:30 PM' },
+    { value: '04:00pm', text: '4:00 PM' },
+    { value: '05:00pm', text: '5:00 PM' },
+  ],
+  dinner: [
+    { value: '06:00pm', text: '6:00 PM' },
+    { value: '06:30pm', text: '6:30 PM' },
+    { value: '07:00pm', text: '7:00 PM' },
+    { value: '07:30pm', text: '7:30 PM' },
+    { value: '08:00pm', text: '8:00 PM' },
+    { value: '08:30pm', text: '8:30 PM' },
+    { value: '09:00pm', text: '9:00 PM' },
+    { value: '09:30pm', text: '9:30 PM' },
+    { value: '10:00pm', text: '10:00 PM' },
+  ],
+};
+
+mealTypeDropdown.addEventListener('change', (event) => {
+  const selectedMeal = event.target.value;
+
+  // Clear existing time options
+  timeDropdown.innerHTML = '<option value="" disabled selected>Select Time</option>';
+
+  // Populate new options based on selected meal
+  if (mealTimes[selectedMeal]) {
+    mealTimes[selectedMeal].forEach((time) => {
+      const option = document.createElement('option');
+      option.value = time.value;
+      option.textContent = time.text;
+      timeDropdown.appendChild(option);
+    });
+  }
+});
