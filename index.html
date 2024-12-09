@@ -767,31 +767,24 @@
 
       <section class="reservation" id="reservation">
         <div class="container">
-
           <div class="form reservation-form bg-black-10">
-
             <form action="" class="form-left">
-
               <h2 class="headline-1 text-center">Online Reservation</h2>
-
+    
               <p class="form-text text-center">
                 Booking request <a href="tel:+201021675563" class="link">+20-102-1675563</a>
                 or fill out the order form
               </p>
-
+    
               <div class="input-wrapper">
                 <input type="text" name="name" placeholder="Name" autocomplete="off" class="input-field">
-
                 <input type="tel" name="phone" placeholder="Phone Number" autocomplete="off" class="input-field">
-
                 <input type="email" name="email" placeholder="Email" autocomplete="off" class="input-field">
               </div>
-
+    
               <div class="input-wrapper">
-
                 <div class="icon-wrapper">
                   <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-
                   <select name="person" class="input-field">
                     <option value="1-person">1 Person</option>
                     <option value="2-person">2 Person</option>
@@ -801,100 +794,79 @@
                     <option value="6-person">6 Person</option>
                     <option value="7-person">7 Person</option>
                   </select>
-
                   <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
                 </div>
-
+    
                 <div class="icon-wrapper">
                   <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
-
                   <input type="date" name="reservation-date" class="input-field">
-
                   <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
                 </div>
-
+    
+                <!-- Meal Selection -->
+                <div class="icon-wrapper">
+                  <ion-icon name="restaurant-outline" aria-hidden="true"></ion-icon>
+                  <select id="mealType" class="input-field">
+                    <option value="" disabled selected>Select Meal</option>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                  </select>
+                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                </div>
+    
+                <!-- Time Selection -->
                 <div class="icon-wrapper">
                   <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                  <select name="person" class="input-field">
-                    <option value="08:00am">08 : 00 am</option>
-                    <option value="09:00am">09 : 00 am</option>
-                    <option value="010:00am">10 : 00 am</option>
-                    <option value="011:00am">11 : 00 am</option>
-                    <option value="012:00am">12 : 00 am</option>
-                    <option value="01:00pm">01 : 00 pm</option>
-                    <option value="02:00pm">02 : 00 pm</option>
-                    <option value="03:00pm">03 : 00 pm</option>
-                    <option value="04:00pm">04 : 00 pm</option>
-                    <option value="05:00pm">05 : 00 pm</option>
-                    <option value="06:00pm">06 : 00 pm</option>
-                    <option value="07:00pm">07 : 00 pm</option>
-                    <option value="08:00pm">08 : 00 pm</option>
-                    <option value="09:00pm">09 : 00 pm</option>
-                    <option value="10:00pm">10 : 00 pm</option>
+                  <select id="timeDropdown" name="reservation-time" class="input-field">
+                    <option value="" disabled selected>Select Time</option>
                   </select>
-
                   <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
                 </div>
-
               </div>
-
+    
               <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
-
+    
               <button type="submit" class="btn btn-secondary">
                 <span class="text text-1">Book A Table</span>
-
                 <span class="text text-2" aria-hidden="true">Book A Table</span>
               </button>
-
             </form>
-
+    
             <div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png')">
-
               <h2 class="headline-1 text-center">Contact Us</h2>
-
               <p class="contact-label">Booking Request</p>
-
               <a href="tel:+201021675563" class="body-1 contact-number hover-underline">+20-102-1675563</a>
-
+    
               <div class="separator"></div>
-
               <p class="contact-label">Location</p>
-
               <address class="body-4">
                 Uni St, Gana City, <br>
                 New Mansoura City 35511 , EGY
               </address>
-
+    
               <p class="contact-label">Breakfast Time</p>
-
               <p class="body-4">
                 Daily (excluding Friday)<br>
-                08.30 am - 11.00 pm
+                8:30 AM - 11:00 AM
               </p>
-
+    
               <p class="contact-label">Lunch Time</p>
-
               <p class="body-4">
                 Daily (Monday to Sunday)<br>
-                01.30 pm - 05.00 pm
+                1:30 PM - 5:00 PM
               </p>
-
+    
               <p class="contact-label">Dinner Time</p>
-
               <p class="body-4">
                 Daily (Monday to Sunday)<br>
-                06.00 pm - 10.00 pm
+                6:00 PM - 10:00 PM
               </p>
-
             </div>
-
           </div>
-
         </div>
       </section>
-
-
+      
 
 
 
@@ -920,7 +892,7 @@
 
                 <h3 class="title-2 card-title">Hygienic Food</h3>
 
-                <p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
+                <p class="label-1 card-text">We prioritize cleanliness and ensure that every dish is prepared under the highest hygiene standards to protect your health.</p>
 
               </div>
             </li>
@@ -934,7 +906,7 @@
 
                 <h3 class="title-2 card-title">Fresh Environment</h3>
 
-                <p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
+                <p class="label-1 card-text">Relax and enjoy your meal in a comfortable and clean setting, designed to enhance your dining experience.</p>
 
               </div>
             </li>
@@ -948,7 +920,7 @@
 
                 <h3 class="title-2 card-title">Skilled Chefs</h3>
 
-                <p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
+                <p class="label-1 card-text">Our talented chefs craft every dish with passion, precision, and years of expertise, guaranteeing delightful flavors.</p>
 
               </div>
             </li>
@@ -962,7 +934,7 @@
 
                 <h3 class="title-2 card-title">Event & Party</h3>
 
-                <p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
+                <p class="label-1 card-text">Celebrate your special moments with us, as we offer exceptional catering and services to make every occasion unforgettable.</p>
 
               </div>
             </li>
@@ -977,8 +949,6 @@
 
         </div>
       </section>
-
-
 
 
 
@@ -1096,7 +1066,7 @@
           <a href="tel:+201021675563" class="body-4 contact-link">Booking Request : +20-106-75563</a>
 
           <p class="body-4">
-            Open : 09:00 am - 01:00 pm
+            Open : 8:00 am - 10:00 pm
           </p>
 
           <div class="wrapper">
